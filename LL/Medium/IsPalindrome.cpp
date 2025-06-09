@@ -42,5 +42,6 @@ ListNode* rev(ListNode* head){
             temp = temp->next;
             newh = newh->next;
         }
+        rev(newh); // restoring original ll
         return true;
     }
