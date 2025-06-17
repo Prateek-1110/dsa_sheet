@@ -8,6 +8,26 @@
 #define rsrt(x) sort(x.rbegin(), x.rend())
 #define pb push_back
 using namespace std;
+//.....................
+//without using any space
+void help(int i , vi&v,vvi&res){
+    if(i==v.size()){
+        res.pb(v);
+        return;
+    }
+    for(int j = i;j<v.size();j++){
+        swap(v[i],v[j]);
+        help(i+1,v,res);
+        swap(v[i],v[j]);
+    }
+}
+vvi permutations(vi&v){
+    vvi ans;
+    help(0,v,ans);
+    return ans;
+}
+//.....................
+// using extra space for freq array........
  void f(vector<int>& curr, vector<int>& v, vector<vector<int>>& res, vector<int>& freq) {
     if (curr.size() == v.size()) {
         res.push_back(curr);
