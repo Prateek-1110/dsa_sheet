@@ -15,9 +15,8 @@ And(&)           -> bit is 1 if both bits are 1
 XOR(^)           -> bit is 1 if both bits are diff
 left shift(<<)   -> n<<i means n*(2^i)
 right shift(>>)  -> n>>i means n/(2^i)
-*/
+
 //Basic Functions
-/*
 checking if ith bit is set -> n&(1<<i)
 clearing ith bit           -> n&~(1<<i)
 toggle ith bit             -> n^(1<<i)
