@@ -18,7 +18,7 @@ void help (int i , vi&v , int k , vvi&res,vi&curr){
     if(v[j]>k)break;
     curr.pb(v[j]);
     help(j+1,v,k-v[j],res,curr);
-    curr.pop_back();
+    curr.pop_back(); 
    }
 }
 vvi combinationSum2(vi&v,int k){
